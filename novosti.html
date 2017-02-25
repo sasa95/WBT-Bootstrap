@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Otkrite koje nam novosti donosi aktualna Bootstrap 4 alfa verzija. ">
+    <meta name="theme-color" content="#9B59B6">
+    <title>Bootstrap | Novosti</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#68407c">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style type="text/css">
+      .news-section h1,
+      .news-section h2,
+      .news-section p,
+      .news-section .row:nth-of-type(odd) .col-lg-6:nth-of-type(2n),
+      .news-section .row:nth-of-type(even) .col-lg-6:nth-of-type(2n) {
+        visibility: hidden;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <section class="container-fluid header-wrapper"><!--HEADER SECTION -->
+          <header>
+            <nav>
+              <button id="menu-btn"></button>
+              <div class="container nav-wrapper">
+                <ul>
+                  <li><a href="index.html">Početna</a></li>
+                  <li><a href="o_projektu.html">O Projektu</a></li>
+                  <li><a href="prednosti.html">Prednosti</a></li>
+                  <li><a href="preuzimanje.html">Preuzimanje</a></li>
+                  <li><a href="komponente.html">Komponente</a></li>
+                  <li><a href="novosti.html" class="page-active">Novosti</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="jumbotron-fluid hero-wrapper" id="hero-news">
+                <img src="img/logo.png" class="bootstrap-logo" alt="Bootstrap logo">
+                <h1>Novosti o Bootstrap-u</h1>
+                <img src="img/arrows.png" class="arrows" alt="">
+            </div>
+          </header>
+        </section> <!--END OF HEADER SECTION -->
+   
+        <section class="news-section mt-5 mb-4">
+          <h1 class="text-center mb-4">Novosti</h1>
+          <p class="text-center">Pogledajte koje su inovacije zastupljene u poslednjoj Bootstrap 4 alpha verziji:</p>
+
+          <div class="container container-news mt-5">
+             <div class="row mb-5">
+                <div class="col-lg-6">
+                  <h2>Sass</h2>
+                  <p>Izvorni kod napisan je u Sass-u. Prethodne verzije koristile su Less, kao glavni predprocesor. Sass je generalno popularniji među front-end zajednicom. Takođe, brže se kompajlira zahvaljujući Libsass-u.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img src="img/news/sass.png" alt="Sass logo">
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-6 push-lg-6">
+                  <h2>Flex Box Grid</h2>
+                  <p>Iako IE 9 ne podržava Flexbox, to nije sprečilo kreatore Bootstrap-a da ga dodaju u verziju 4. U početnim verzijama 4-ke, opcija korišćenja Flex Box-a bila je isključena, a sada je ona podrazumevano uključena. Postoji jedna boolean promenljiva u _variables.scss fajlu sa nazivom $enable-flex. Ako se postavi na false i rekompajlira, sve grid komponente koristiće standardnu Float tehniku.</p>
+                </div>
+                <div class="col-lg-6 text-center pull-lg-6">
+                  <img src="img/news/flexbox.png" alt="">
+                </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-lg-6">
+                <h2>Unapređeni Medija Upiti</h2>
+                <p>Na prethodnim verzijama često se sticao utisak da fali još jedna prelomna tačka za mobilne uređaje u landscape orijentaciji. Srećom, developeri su to prepoznali i u verziju 4 uključili tu dodatnu prelomnu tačku. Ovako bi izgledali media upiti sa mobile-first pristupom:<br><span class="hidden-md-down arrow">&#8594;</span></p>
+              </div>
+              <div class="col-lg-6 text-center whiteboard">
+                <pre style="white-space: pre-line;" class="text-left">
+                  <code class="language-scss"><span class="code-comment">// Extra small devices (portrait phones, less than 576px)</span>
+                  <span class="code-comment">// No media query since this is the default in Bootstrap</span>
+
+                  <span class="code-comment">// Small devices (landscape phones, 576px and up)</span>
+                  <span class="code-media">@media</span> (min-width: <span class="code-width">576px</span>) { ... }
+
+                  <span class="code-comment">// Medium devices (tablets, 768px and up)</span>
+                  <span class="code-media">@media</span> (min-width: <span class="code-width">768px</span>) { ... }
+
+                  <span class="code-comment">// Large devices (desktops, 992px and up)</span>
+                  <span class="code-media">@media</span> (min-width: <span class="code-width">992px</span>) { ... }
+
+                  <span class="code-comment">// Extra large devices (large desktops, 1200px and up)</span>
+                  <span class="code-media">@media</span> (min-width: <span class="code-width">1200px</span>) { ... }
+                  </code></pre>
+              </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-6 push-lg-6">
+                  <h2>IE 8 gubi podršku</h2>
+                  <p>Sa pojavom Bootstrap 4, podrška za stari IE8 browser je ukinuta. To znači da front-end framework nije ograničen starim pregledačima i sada se potpuno može okrenuti novim CSS3 tehnikama. IE 9 je i dalje podržan, ali najveći problem predstavlja njegovo odsustvo podrške za Flex Box.</p>
+                </div>
+              <div class="col-lg-6 pull-lg-6 text-center">
+                <img src="img/news/ie.png" alt="Internet explorer logo">
+              </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                  <h2>Relativne mere</h2>
+                  <p>Ovo je jedna od najkonfuznijih promena. Iako je i dalje moguće koristiti px, em, ili pt, tipografija u Bootstrap 4 je kompletno bazirana na rem jedinicama. To znači da su veličine fonta relativne u odnosu na root element (html tag). Podrazumevano, veličina fonta root elementa je 16px.</p>
+                </div>
+              <div class="col-lg-6 text-center">
+                <img src="img/news/units.gif" alt="Animacija koja prikazuje koncept korišćenja relativnih mera">
+              </div>
+            </div>
+          </div>
+        </section>
+     </div>
+    </div>
+    
+    <section class="container-fluid container-footer"><!-- FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="row names">
+            <div class="col-md-4">Saša Drmić</div>
+            <div class="col-md-4">Danijela Tuba</div>
+            <div class="col-md-4">Nikola Milanović</div>
+          </div>
+          <img src="img/logo-footer.png" class="footer-logo" alt="Bootstrap logo">
+          <p class="copyright">&copy; Copyright 2017 All rights reserved</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/animations/news.js"></script>
+  </body>
+</html>

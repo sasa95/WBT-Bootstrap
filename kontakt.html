@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kontaktirajte nas preko forme na ovoj stranici. Cenimo vaše mišljenje i odgovaramo na vaša pitanja.">
+    <meta name="theme-color" content="#9B59B6">
+    <title>Bootstrap | Kontakt</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#68407c">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/alertify.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style type="text/css">
+      .contact-main h1,
+      .contact-main p,
+      .contact-main .form-group,
+      .submit-container .btn {
+        visibility: hidden;
+      }
+    </style>
+
+  </head>
+  <body>
+    
+  <div id="wrap">
+    <div id="main">
+      <section class="container-fluid header-wrapper"><!--HEADER SECTION -->
+        <header>
+          <nav>
+            <button id="menu-btn"></button>
+            <div class="container nav-wrapper">
+              <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o_projektu.html">O Projektu</a></li>
+                <li><a href="prednosti.html">Prednosti</a></li>
+                <li><a href="preuzimanje.html">Preuzimanje</a></li>
+                <li><a href="komponente.html">Komponente</a></li>
+                <li><a href="novosti.html">Novosti</a></li>
+                <li><a href="kontakt.html" class="page-active">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="jumbotron-fluid hero-wrapper" id="hero-contact">
+            <h1>Kontaktirajte Nas</h1>
+            <img src="img/arrows.png" class="arrows" alt="">
+          </div>
+        </header>
+      </section> <!--END OF HEADER SECTION -->
+      
+      <section class="contact-main mb-5">
+        <div class="container">
+          <h1>Kontakt</h1>
+          <p>Ukoliko imate bilo kakva pitanja u vezi sa Bootstrap-om, ili eventualne komentare i sugestije, javite nam se putem sledeće forme. Potrudićemo se da vam odgovorimo u najkraćem mogućem roku.</p>
+              <div class="form-container">
+                <form id="contact-form">
+                  <div class="form-group">
+                    <label for="imeInput">Ime:</label>
+                    <input type="text" class="form-control" id="imeInput" name="Ime" placeholder="Petar Petrović">
+                  </div>
+                  <div class="form-group">
+                    <label for="emailInput">E-mail:</label>
+                    <input type="email" class="form-control" id="emailInput" name="_replyto" placeholder="petarpetrovic@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="ocenaSelect">Ocenite nas:</label>
+                    <select class="form-control custom-select" id="ocenaSelect" name="Ocena">
+                      <option>Sajt je odličan</option>
+                      <option>Sajt je dobar</option>
+                      <option>Sajt je zadovoljavajući</option>
+                      <option>Sajt bi mogao biti bolji</option>
+                      <option>Sajt je beskoristan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleTextarea">Vaša poruka:</label>
+                    <textarea class="form-control" id="exampleTextarea" name="Poruka" rows="8" placeholder="Hteo/htela bih da istaknem..."></textarea>
+                  </div>
+                  <div class="submit-container">
+                    <button type="submit" value="Send" class="btn btn-info">Pošaljite</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+      </section>
+
+   </div>
+  </div>
+    <section class="container-fluid container-footer"><!-- FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="row names">
+            <div class="col-md-4">Saša Drmić</div>
+            <div class="col-md-4">Danijela Tuba</div>
+            <div class="col-md-4">Nikola Milanović</div>
+          </div>
+          <img src="img/logo-footer.png" class="footer-logo" alt="Bootstrap logo">
+          <p class="copyright">&copy; Copyright 2017 All rights reserved</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="js/alertify.js"></script>
+   <script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
+   <script type="text/javascript" src="js/animations/contact.js"></script>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script type="text/javascript" src="js/animations/contact.js"></script>
+  </body>
+</html>
+

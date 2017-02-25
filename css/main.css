@@ -1,0 +1,880 @@
+/*===============================
+=            GENERAL            =
+===============================*/
+
+body {
+	background:#e1daee;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+h1,h2,h3 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: normal;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 150px; /* must be same height as the footer */
+}
+
+a,
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:visited,
+a:focus,
+a:active,
+.btn-info:active,
+.btn-info:focus {
+	text-decoration: none;
+	border:none!important;
+	outline: none!important;
+	box-shadow: none!important;
+	color: #fff;
+}
+
+a.page-active {
+	color: #9a9a9a;
+}
+
+.btn-info {
+	color: #fff;
+    background-color: #574292;
+    border:none!important;
+}
+
+div[id^="hero-"] {
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+
+/*==================================
+=            ANIMATIONS            =
+==================================*/
+
+.hideMe {
+	visibility: hidden;
+}
+
+.showMe {
+	visibility: visible!important;
+}
+
+.hero-wrapper p,
+.hero-wrapper h1,
+.arrows,
+.bootstrap-logo {
+	visibility: hidden;
+}
+
+/*====================================
+=            HEADER + NAV            =
+====================================*/
+
+.header-wrapper,
+nav ul {
+	padding:0;
+	text-align: center;
+}
+
+header {
+	position: relative;
+}
+
+header h1 {
+	color: #fff;
+}
+
+.hero-wrapper {
+	position: relative;
+}
+
+nav	{
+	position: fixed;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 1.3em;
+	z-index: 100;
+}
+
+#menu-btn {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	z-index: 100;
+	width: 50px;
+	height: 50px;
+	background: url('../img/menu.png') no-repeat;
+	background-size: cover;
+	border:none;
+	opacity: .4;
+}
+
+#menu-btn:hover {
+	cursor: pointer;
+	opacity: .4;
+}
+
+#menu-btn:focus {
+	outline: none;
+	opacity: 1;
+}
+
+#menu-btn.menu-close {
+	background: url('../img/cancel.png') no-repeat;
+	background-size: cover;
+}
+
+.nav-wrapper {
+	opacity: 0;
+	display: none;
+}
+
+nav ul {
+	list-style: none;
+	padding-top: 40px;
+}
+
+nav li {
+	width: 70%;
+	margin: auto;
+}
+
+nav a {
+	width: 100%;
+	display: block;
+	padding: 15px 0;
+	color: #fff;
+	font-weight: bold;
+	transition: color .4s;
+}
+
+nav a:hover {
+	color: #9a9a9a;
+	text-decoration: none;
+}
+
+.header-wrapper .hero-wrapper {
+	text-align: center;
+	height: 550px;
+	padding-top: 100px;
+	background-image: -moz-linear-gradient( -90deg, rgb(142,68,173) 0%, rgb(26,188,156) 100%);
+  	background-image: -webkit-linear-gradient( -90deg, rgb(142,68,173) 0%, rgb(26,188,156) 100%);
+  	background-image: -ms-linear-gradient( -90deg, rgb(142,68,173) 0%, rgb(26,188,156) 100%);
+  	background-color: #68407c;
+}
+
+header .bootstrap-logo {
+	margin-bottom: 30px;
+	width: 140px;
+}
+
+.header-wrapper p {
+	color: #fff;
+  	font-weight: bold;
+  	line-height: 1.7em;
+  	margin-bottom: 20px;
+}
+
+.action-call {
+	position: relative;
+}
+
+.action-call p {
+	font-weight: normal;
+}
+
+.arrows {
+	width: 20px;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+}
+
+.hero-wrapper h1 {
+	text-shadow: 2px 2px 5px rgba(0,0,0,1);
+	max-width: 95%;
+	margin: auto;
+}
+
+.hero-wrapper>p {
+	width: 90%;
+	margin: auto;
+}
+
+#hero-home,
+#hero-download {
+	background-attachment: fixed;
+}
+
+#hero-home .btn-info {
+	padding:11px 15px;
+}
+
+/*====================================
+=            HOME SECTION            =
+====================================*/
+
+.home-section {
+	text-align: center;
+	overflow-y: hidden;
+}
+
+.home-card {
+	display: block;
+	width: 196px;
+	height: 224px;
+	margin:20px auto;
+	padding-top: 13px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center 60%;
+	border-radius: 10px;
+	background-color: #574292;
+	transition: box-shadow .4s ease-out;
+}
+
+.card-row:first-child .col-md-4:nth-child(1) .home-card {
+	background-image: url('../img/cards/card1.png');
+}
+
+.card-row:first-child .col-md-4:nth-child(2) .home-card {
+	background-image: url('../img/cards/card2.png');
+}
+.card-row:first-child .col-md-4:nth-child(3) .home-card {
+	background-image: url('../img/cards/card3.png');
+}
+
+.card-row:nth-child(2) .col-md-4:nth-child(1) .home-card {
+	background-image: url('../img/cards/card4.png');
+}
+
+.card-row:nth-child(2) .col-md-4:nth-child(2) .home-card {
+	background-image: url('../img/cards/card5.png');
+}
+
+.card-row:nth-child(2) .col-md-4:nth-child(3) .home-card {
+	background-image: url('../img/cards/card6.png');
+}
+
+
+/*==============================
+=            FOOTER            =
+==============================*/
+
+.container-footer {
+  	background: -moz-linear-gradient( -90deg, rgba( 26, 188, 156, 0.6 ) 0%, rgba( 142, 68, 173,0.4 ) 100%);
+  	background: -webkit-linear-gradient( -90deg, rgba( 26, 188, 156,0.6 ) 0%, rgba( 142, 68, 173,0.4 ) 100%);
+  	background: -ms-linear-gradient( -90deg, rgba( 26, 188, 156,0.6 ) 0%, rgba( 142, 68, 173,0.4 ) 100%);
+  	background-color: #9B59B6;
+  	color: #fff;
+  	font-family: 'Ubuntu', sans-serif;
+  	font-weight: bold; 
+  	position: relative;
+  	margin-top: 20px;
+    position: relative;
+  	margin-top: -150px; /* negative value of footer height */
+  	height: 150px;
+  	clear: both;
+}
+
+footer .names {
+	text-align: left;
+	line-height: 2em;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.footer-logo {
+	width: 70px;
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	opacity: .8;
+}
+
+.copyright {
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 10px;
+	font-weight: normal;
+	font-size: .8em;
+}
+
+
+/*==================================
+=            O PROJEKTU            =
+==================================*/
+
+#hero-project {
+	background-image: url('../img/hero/O_projektu/proj-md.jpg');
+	background-position: center;
+}
+
+.about-section {
+	margin: 30px auto;
+	width: 80%;
+	text-align: center;
+}
+
+.about-points .col-md-4 {
+	margin-bottom: 20px;
+}
+
+.about-points p {
+	text-align: center;
+}
+
+.about-points img {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.about-icon {
+	width: 70px;
+	display: block;
+	margin:auto;
+}
+
+.container-students {
+	text-align: center;
+}
+
+.container-students img {
+	width: 170px;
+	margin: auto;
+	display: block;
+	padding-bottom: 20px;
+}
+
+.student-card {
+	height: 300px;
+	width: 240px;
+	margin:0 auto 20px auto;
+	background-color: #574292;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	transition: box-shadow .4s ease-out;
+}
+
+.student-card p {
+	text-align: center;
+	line-height: .5em;
+	color: #fff;
+}
+
+
+/*===============================
+=            KONTAKT            =
+===============================*/
+
+#hero-contact {
+	background-image: url('../img/hero/kontakt/kontakt-md.jpg');
+	background-position: center;
+}
+
+.contact-main h1 {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+.contact-main p {
+	text-align: center;
+	max-width: 520px;
+	margin: 0 auto 20px;
+}
+
+.submit-container {
+	text-align: center;
+}
+
+.submit-container .btn-info {
+	letter-spacing: 1px;
+}
+
+
+/*===============================
+=            PREDNOSTI            =
+===============================*/
+
+#hero-pros {
+	background-image: url('../img/hero/prednosti/pros-md.jpg');
+	background-position: left center;
+}
+
+.container-pros h2,
+.container-news h2,
+.container-components h2 {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.pros-section > p {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-pros p {
+	text-align: justify;
+}
+
+.container-pros .row:nth-of-type(1) img {
+	max-width: 200px;
+	transform: rotate(30deg);
+}
+
+.container-pros .row:nth-of-type(2) img {
+	max-width: 400px;
+}
+
+.container-pros .row:nth-of-type(3) img {
+	max-width: 250px;
+}
+
+.container-pros .row:nth-of-type(4) img {
+	max-width: 160px;
+}
+
+.container-pros .row:nth-of-type(5) img {
+	max-width: 190px;
+}
+
+/*===============================
+=            NOVOSTI            =
+===============================*/
+
+#hero-news {
+	background-image: url('../img/hero/novosti/news-md.jpg');
+	background-position: center;
+}
+
+.container-news p {
+	text-align: justify;
+}
+
+.container-news .row:nth-of-type(1) img  {
+	max-width: 250px;
+}
+
+.container-news .row:nth-of-type(2) img  {
+	max-width: 200px;
+}
+
+.container-news .row:nth-of-type(4) img  {
+	max-width: 200px;
+}
+
+.container-news .row:nth-of-type(5) img  {
+	width: 100%;
+	max-width: 500px;
+}
+
+.whiteboard {
+	background-color: #efefef;
+	border-radius: 10px;
+	padding:10px;
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+.whiteboard pre {
+	width: 100%;
+}
+
+.code-media {
+	color: purple;
+}
+
+.code-width {
+	color: #5879b4;
+}
+
+.code-comment {
+	color: #8a8a8a;
+}
+
+/*===============================
+=            KOMPONENTE            =
+===============================*/
+
+#hero-comp {
+	background-image: url('../img/hero/komponente/comp-md.jpg');
+	background-position: center;
+}
+
+.container-components p {
+	text-align: justify;
+}
+
+.carousel-item {
+	height: 200px;
+}
+
+.img-fluid {
+	width: inherit;
+	height: inherit;
+}
+
+.components-section nav {
+	width: 100%;
+}
+
+#dropdownMenu1 {
+	font-size: 1.25em;
+	margin: auto;
+	display: block;
+}
+
+.dropdown-menu {
+	float: none;
+	position: static;
+	width: 148px;
+	margin: auto;
+}
+
+a.dropdown-item {
+	color: initial;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}	
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #68407c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #68407c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*===================================
+=            PREUZIMANJE            =
+===================================*/
+
+.download-section .col-lg-4  {
+	margin-bottom: 40px;
+}
+
+.whiteboard code {
+	color: #5879b4;
+}
+
+.whiteboard .code-attr {
+	color: #4f9fcf;
+}
+
+.whiteboard .code-val {
+	color: #d44950;
+}
+
+.p-download {
+	font-size: 1.4em;
+	margin-bottom: 0;
+}
+
+
+/*============================================================================================================
+=            							     RESPONSIVE            												 =
+============================================================================================================*/
+
+
+/*Enable nav scrolling in landscape*/
+
+@media screen and (max-height: 500px) {
+
+    nav	{
+		position: absolute;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+	    height: 100px;
+	}
+	
+}
+
+
+@media screen and (min-width: 470px) {
+
+	.hero-wrapper p {
+		font-size: 1.3em;
+	}
+
+	.hero-wrapper .p-download {
+		font-size: 1.7em;
+	}
+}
+
+@media screen and (min-width: 567px) {
+
+	.student-card {
+		width: 200px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.action-call {
+		position: relative;
+		bottom:-20px;
+	}
+
+	.hero-wrapper p {
+		font-size: 1.5em;
+	}
+
+	.home-section {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.home-card:hover,
+	.student-card:hover {
+		box-shadow: 0px 10px 7px #666;
+	}
+
+	.container-footer {
+		margin-top: -172px;
+  		height: 172px;
+	}
+
+	footer .names {
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
+
+	.footer-logo {
+		position: static;
+		display: block;
+		margin:auto;
+		margin-bottom: 15px;
+	}
+
+	.student-card {
+		width: 250px;
+	}
+
+	.contact-main {
+		max-width: 600px;
+		margin: auto;
+	}
+
+	.hero-wrapper .p-download {
+		font-size: 2em;
+	}
+	
+}
+
+
+@media screen and (min-width: 992px) {
+
+	#hero-project {
+		background-image: url('../img/hero/O_projektu/proj-lg.jpg');
+	}
+
+	#hero-comp {
+		background-image: url('../img/hero/komponente/comp-lg.jpg');
+	}
+
+	#hero-pros {
+		background-image: url('../img/hero/prednosti/pros-lg.jpg');
+		background-position: center;
+	}
+
+	#hero-news {
+		background-image: url('../img/hero/novosti/news-lg.jpg');
+	}
+
+	#hero-contact {
+		background-image: url('../img/hero/kontakt/kontakt-lg.jpg');
+	}
+
+	/**************NAVIGATION LARGE**************/
+
+	nav {
+		right: 0;
+		left: auto;
+		width: 300px;
+		height: 100px;
+	}
+
+	.nav-wrapper {
+		opacity: 1;
+		background-color: #68407c;
+		position: absolute;
+		top: 0;
+		right: -500px;
+		height: 100%;
+		width: 300px;
+		border-left: 2px solid #ddd;
+	}
+
+
+
+	#menu-btn {
+		left: 59px;
+		transition: opacity .4s ease-out;
+	}
+
+	#menu-btn:hover {
+		opacity: 1;
+	}
+
+	.header-wrapper nav ul {
+		padding-top: 80px;
+		text-align: left;
+	}
+
+	.student-card {
+		max-width: 240px;
+	}
+
+	.container-pros img {
+		position: relative;
+	}
+
+	/**************END OF NAVIGATION LARGE**************/
+
+
+	.hero-wrapper >p {
+		width: 70%;
+		max-width: 990px;
+		margin:auto;
+	}
+
+	.action-call {
+		bottom:-35px;
+	}
+
+	.home-section {
+		overflow: visible;
+	}
+
+	.home-card {
+		width: 252px;
+		height: 288px;
+	}
+
+	.arrow {
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+		font-size: 4em;
+		color: #9B59B6;
+	}
+	
+	.container-components nav .navbar-brand {
+		width: 80%;
+	}
+
+	.components-section nav {
+		height: 80px;
+	}
+
+	.comp-center {
+		align-self: center;
+	}
+
+	
+	.download-section .col-lg-4 {
+		position: relative;
+		padding-bottom: 40px;
+	}
+
+	.download-section .btn-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (width: 992px) {
+	.action-call {
+		bottom: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#hero-pros {
+		background-position: center -100px;
+	}
+
+}
+
+@media screen and (min-width: 1500px) {
+	.header-wrapper .hero-wrapper {
+		height: 750px;
+	}
+
+}
